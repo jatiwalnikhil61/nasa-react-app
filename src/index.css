@@ -27,6 +27,8 @@
 .imgContainer {
   display: flex;
   flex-direction: column;
+  max-height: 100vh;
+  width: 100%;
 }
 
 .bgImage {
@@ -38,10 +40,11 @@
 
 footer {
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
@@ -50,6 +53,15 @@ footer {
 footer div {
   display: flex;
   flex-direction: column;
+}
+
+footer h2 {
+  font-size: 1.4rem;
+}
+
+footer h1 {
+  font-size: 0.9rem;
+  font-weight: 200;
 }
 
 footer button {
@@ -66,17 +78,8 @@ footer button i {
   font-size: 1.3rem;
 }
 
-footer button:hover{
+footer button:hover {
   opacity: 0.7;
-}
-
-footer h2 {
-  font-size: 1.4rem;
-}
-
-footer h1 {
-  font-size: 0.9rem;
-  font-weight: 200;
 }
 
 .bgGradient {
@@ -110,7 +113,7 @@ footer h1 {
   padding: 1rem;
   overflow-y: scroll;
   height: 100%;
-  width: 90%;
+  width: 80%;
   max-width: 800px;
   margin-left: auto;
   background: #030615;
@@ -140,13 +143,13 @@ footer h1 {
   opacity: 0.7;
 }
 
-.descriptionContainer{
+.descriptionContainer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.descriptionTitle{
+.descriptionTitle {
   font-size: 1.1rem;
   font-weight: 200;
 }
@@ -158,30 +161,40 @@ footer h1 {
   flex: 1;
 }
 
-.loadingState i{
+.loadingState i {
   opacity: 0.2;
   font-size: 3rem;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  from{
+  from {
     transform: rotate(0deg);
   }
-  to{
+
+  to {
     transform: rotate(360deg);
   }
 }
 
+
 @media (min-width: 640px) {
-  .sidebar{
+  .sidebar {
     position: relative;
     inset: unset;
     min-width: 30%;
+    max-height: 100vh;
     box-shadow: 0 0 40px 1px #030615;
   }
 
-  .sidebarContents{
+  .sidebarContents {
     margin: unset;
+    width: 100%;
+  }
+
+  .bgOverlay {
+    right: 0;
+    left: unset;
+    width: 100vw;
   }
 }
